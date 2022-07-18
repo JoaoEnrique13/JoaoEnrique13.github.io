@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: dodgerblue;
+    display: grid;
+    place-items: center;
+}
+
+.musica{
+    display: grid;
+    place-items: center;
+}
+
+.capa{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+.nome-musica{
+    max-width: 250px;
+}
+
+.seta{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    filter: hue-rotate(90deg);
+}
+
+.play-pause{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nome-musica{
+    width: 100%;
+    padding: 20px 0; 
+}
+
+.none{
+    display: none;
+}
