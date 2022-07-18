@@ -1,0 +1,241 @@
+:root{
+    --laranja: rgb(230, 95, 65);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url("../img/morse.png");
+    box-shadow: inset 0 0 0 200px rgb(0, 0, 0 ,0.2);
+    background-position: end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background: #191C22;
+}
+
+.escolher-conversao{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #191C22;
+    margin: 20px 300px;
+}
+
+.text-morse,  .morse-texto{
+    background: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.active{
+    background: #000;
+    color: #fff;
+}
+.desactive{
+    opacity: 0.7;
+}
+
+.texto, .result{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200px;
+}
+
+.result{
+    font-size: 30px;
+}
+
+.converter-inverso, .none, .limpar-inverso{
+    display: none;
+}
+
+.div-textearea{
+    width: 100%;
+    padding: 0 300px;
+}
+
+.txt-conversao{
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 0 10px 300px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-converter, .btn-limpar{
+    background: var(--laranja);
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.div-btn{
+    margin: 15px 300px 50px 300px;
+}
+
+.div-copiado{
+    background: #fff;
+    color: #191C22;
+    height: 30px;
+    width: 100%;
+    padding: 5px 10px;
+    display: grid;
+    place-items: center;
+    top: 0;
+    border-radius: 5px;
+    z-index: 999;
+    position: absolute;
+}
+
+.div-copiar{
+    position: relative;
+    width: 50%;
+    margin-left: 77px;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.div-ponta-copiado::before{
+    content: "";
+    top: -3px;
+    min-height: 15px;
+    min-width: 15px;
+    transform: rotate(45deg);
+    left: 39%;
+    background: #fff;
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+}
+
+textarea:disabled{
+    background: rgba(255, 255, 255, 0.815);
+    color: #191C22;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+}
+
+.animacao{
+    animation: aparecerCopiado 1s;
+}
+
+@keyframes aparecerCopiado{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.copiar{
+    position: relative;
+}
+
+@media screen and (max-width: 414px)
+{
+    header{
+        min-height: 200px;
+    }
+    
+    .txt-conversao{
+        padding: 0;
+        text-align: center;
+    }
+
+    .div-textearea{
+        padding: 0 20px;   
+    }
+
+    .div-btn{
+        margin: 15px 20px 50px 20px;
+    }	
+
+    .escolher-conversao{
+        margin: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 912px)
+{
+    header{
+        min-height: 300px;
+    }
+
+    .txt-conversao{
+        padding: 0;
+        text-align: center;
+    }
+
+    .div-textearea{
+        padding: 0 100px;   
+    }
+
+    .div-btn{
+        margin: 15px 100px 50px 100px;
+    }	
+
+    .escolher-conversao{
+        margin: 20px 100px;
+    }
+}
+
+@media screen and (max-width: 280px)
+{
+    header{
+        min-height: 300px;
+    }
+
+    .txt-conversao{
+        padding: 0;
+        text-align: center;
+    }
+
+    .div-textearea{
+        padding: 0 20px;   
+    }
+
+    .div-btn{
+        margin: 15px 20px 50px 20px;
+    }	
+
+    .escolher-conversao{
+        margin: 20px 20px;
+    }
+}

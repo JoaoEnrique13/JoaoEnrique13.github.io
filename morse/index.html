@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Morse - João Enrique</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/morse.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Código Morse</h1>
+    </header>
+    <main>
+        <div class="escolher-conversao">
+            <div id="morse" class="text-morse active" onclick="textMorse()">
+                Texto para morse
+            </div>
+            <div class="morse-texto desactive" onclick="morseTexto()">
+                Morse para Texto
+            </div>
+        </div>
+        <h3 class="txt-conversao">Informe o texto para a conversão</h3>
+        <div class="div-textearea txt">
+            <textarea placeholder="Digite um texto" id="texto" class="texto"></textarea>
+        </div>
+        
+        <div class="div-btn">
+            <button class="btn-converter converter" onclick="converter()">Converter</button>
+            <button class="btn-converter converter-inverso" onclick="converterInverso()">Converter</button>
+            <button class="btn-limpar limpar" onclick="limpar()">Limpar</button>
+            <button class="btn-limpar limpar-inverso" onclick="limparInverso()">Limpar</button>
+        </div>
+
+        <div class="div-textearea ms">
+            <textarea disabled="disabled" placeholder=".-. . ... ..- .-.. - .- -.. ---" class="result" id="result"></textarea>
+        </div>
+        <div class="div-btn">
+            <button class="btn-limpar" onclick="tocarMorse()">Tocar</button>
+            
+                <button class="btn-converter copiar" onclick="copiar()">Copiar</button>
+                <div class="div-copiar">
+                    <div class="div-ponta-copiado"></div>
+                    <div class="div-copiado">
+                        Copiado
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <audio id="a" preload="auto" controls class="none">
+        <source src="audio/a.mp3" type="audio/mp3">
+    </audio>
+    <audio id="b" preload="auto" controls class="none">
+        <source src="audio/b.mp3" type="audio/mp3">
+    </audio>
+    <audio id="c" preload="auto" controls class="none">
+        <source src="audio/c.mp3" type="audio/mp3">
+    </audio>
+    <audio id="d" preload="auto" controls class="none">
+        <source src="audio/d.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="e" preload="auto" controls class="none">
+        <source src="audio/e.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="f" preload="auto" controls class="none">
+        <source src="audio/f.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="g" preload="auto" controls class="none">
+        <source src="audio/g.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="h" preload="auto" controls class="none">
+        <source src="audio/h.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="i" preload="auto" controls class="none">
+        <source src="audio/i.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="j" preload="auto" controls class="none">
+        <source src="audio/j.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="k" preload="auto" controls class="none">
+        <source src="audio/k.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="l" preload="auto" controls class="none">
+        <source src="audio/l.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="m" preload="auto" controls class="none">
+        <source src="audio/m.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="n" preload="auto" controls class="none">
+        <source src="audio/n.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="o" preload="auto" controls class="none">
+        <source src="audio/o.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="p" muted preload="auto" controls class="none">
+        <source src="audio/p.mp3" type="audio/mp3">
+    </audio>
+    <audio id="q" muted preload="auto" controls class="none">
+        <source src="audio/q.mp3" type="audio/mp3">
+    </audio>
+    <audio id="r" muted preload="auto" controls class="none">
+        <source src="audio/r.mp3" type="audio/mp3">
+    </audio>
+    <audio id="s" muted preload="auto" controls class="none">
+        <source src="audio/s.mp3" type="audio/mp3">
+    </audio>
+    <audio id="t" muted preload="auto" controls class="none">
+        <source src="audio/u.mp3" type="audio/mp3">
+    </audio>
+    <audio id="u" muted preload="auto" controls class="none">
+        <source src="audio/u.mp3" type="audio/mp3">
+    </audio>
+    <audio id="v" muted preload="auto" controls class="none">
+        <source src="audio/v.mp3" type="audio/mp3">
+    </audio>
+    <audio id="w" muted preload="auto" controls class="none">
+        <source src="audio/w.mp3" type="audio/mp3">
+    </audio>
+    <audio id="x" muted preload="auto" controls class="none">
+        <source src="audio/x.mp3" type="audio/mp3">
+    </audio>
+    <audio id="y" muted preload="auto" controls class="none">
+        <source src="audio/y.mp3" type="audio/mp3">
+    </audio>
+    <audio id="z" muted preload="auto" controls class="none">
+        <source src="audio/a.mp3" type="audio/mp3">
+    </audio>
+    <script src="js/main.js"></script>
+</body>
+</html>
