@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-lateral{
+    width: 75px!important;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0!important;
+    z-index: 999!important;
+    margin: 0!important;
+}
+
+.icone-menu-lateral{
+    pointer-events: none; 
+    display: block;
+    width: 27px;
+    height: 27px;
+}
+
+.alinhar-menu{
+    display: grid!important;
+    place-items: center!important;
+}
+
+.text-menu-lateral
+{
+    font-size: 12px!important;
+}
+
+.btn-menu-lateral{
+    padding: 20px 0;
+}
+.btn-menu-lateral:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.navbar{
+    padding-left: 75px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)!important;
+    z-index: 9!important;
+    background-color: #fff;
+}
+
+.pesquisar{
+    width: 600px!important;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-left: -15px;
+}
+
+body{
+    min-height: 110vh;
+}
+
+.fixed-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu-secundario{
+    top: 65px;
+    height: 55px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)!important;
+    padding-left: 90px; 
+    z-index: 8;
+}
+
+.btn-carrousel-menu-ativo{
+    background-color: #000!important;
+    padding: 5px 10px!important;
+    color: #fff;
+    border-radius: 20px;
+}
+.btn-carrousel-menu{
+    background-color: #f2f2f2;
+    padding: 5px 10px!important;
+    color: #000;
+    border-radius: 20px;
+}
+
+.fundo-icone{
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    padding: 7px;
+    margin-top: -6px;
+}
+
+.menu-right
+{
+    margin-left: 89px!important;
+}
+
+.img-conta{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.col1{
+    display: grid;
+    place-items: center; 
+} 
+
+.img-conta-banner{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%!important;
+    cursor: pointer;
+}
+
+.card{
+    border: 0!important;
+}
