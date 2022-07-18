@@ -15,7 +15,7 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../img/homem_aranha.jpg");
+    background-image: url("../img/homem_aranha.png");
     background-color: #ccc;
     min-height: 100vh;
     display: flex;
