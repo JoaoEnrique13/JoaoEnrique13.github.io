@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - João Enrique</title>
+  <link rel="shortcut icon" href="img/homem_aranha.jpg" type="image/jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="row">
+      <div class="col-7 fundo">
+
+      </div>
+      <div class="col fundo-entrar-formulario">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="row">
+            <div class="col titulo-entrar">
+              <h1>Entrar</h1>
+            </div>
+          </div>
+          <div class="row form">
+            <div class="col-7">
+              <div class="form-floating mb-5">
+                <input type="email" class="form-control form" id="floatingInput" placeholder="nome@gmail.com">
+                <label for="floatingInput">Email</label>
+              </div>
+            </div>
+          </div>
+          <div class="row form">
+            <div class="col-7">
+              <div class="form-floating">
+                <input type="password" class="form-control form" id="floatingPassword" placeholder="Senha">
+                <label for="floatingPassword">Senha</label>
+              </div>
+              <p class="text-white"><br />Não tem uma conta? <a class="link" href="">Cadastre-se</a></p>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button class="btn btn-entrar" type="submit">Entrar</button>
+            <p class="text-center text-esqueci-senha"><a href="#">Esqueci minha senha</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="text-center">Saiba Mais</h1>
+    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi iste, eum quisquam eveniet rem sed
+      cum consectetur reprehenderit nemo. Nemo facere libero sunt labore repellendus, veritatis debitis, eaque minus
+      assumenda voluptatum modi distinctio quo quaerat? Temporibus modi, voluptatem odio expedita vitae fuga. Alias
+      placeat quis ducimus laborum, ad earum porro error! Odio ea cum quo quidem necessitatibus, repudiandae libero
+      maiores nesciunt ut doloremque explicabo, fugiat sunt est et blanditiis perferendis odit placeat hic excepturi
+      nihil dolor cumque dignissimos, dicta deleniti. Reiciendis numquam debitis doloremque id maiores ipsum animi
+      explicabo, non in pariatur ut expedita quas quibusdam ipsam? Eaque, provident saepe?</p>
+  </main>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
+</body>
+
+</html>
