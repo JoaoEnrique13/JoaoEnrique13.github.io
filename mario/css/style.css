@@ -227,13 +227,13 @@ button{/*botao da tela de game over*/
             bottom: 0px;
         }
         40%{
-            bottom: 300px;
+            bottom: 200px;
         }
         50%{
-            bottom: 300px;
+            bottom: 200px;
         }
         70%{
-            bottom: 300px;
+            bottom: 200px;
         }
         100%{
             bottom: 0px;
