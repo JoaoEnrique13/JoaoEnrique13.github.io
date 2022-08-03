@@ -39,6 +39,7 @@ body{
     bottom: 0;
     width: 70px;
     animation: pipe-animation 1.5s infinite linear;
+    right: -70px;
 }
 
 .joao{/*personagem*/
@@ -197,7 +198,7 @@ button{/*botao da tela de game over*/
 }
 
 /*Responsividade*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 514px) {
     .tela-game-over{
         width: 99%;
         padding: 20px 50px;
@@ -218,6 +219,7 @@ button{/*botao da tela de game over*/
         bottom: 0;
         width: 50px;
         animation: pipe-animation 1s infinite linear;
+        animation-delay: 1s;
     }
 
     @keyframes jump{
