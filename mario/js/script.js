@@ -24,7 +24,7 @@ const loop = setInterval(()=>{
     const joaoPosition = +window.getComputedStyle(joao).bottom.replace('px', '')//pegar a posicao do personagem do bottom e retirar o px para converter para numero
     const cloudsPosition = + window.getComputedStyle(clouds).right.replace('px', '')//pegar a posicao da nuvem a direita e retirar o px para converter para numero
     const cloudsPosition1 = + window.getComputedStyle(clouds1).right.replace('px', '')//pegar a posicao da nuvem a direita e retirar o px para converter para numero
-    //musicPlay.play()//tocar musica ao comecar o jogo
+    musicPlay.play()//tocar musica ao comecar o jogo
     
     //verifica se o personagem bateu no objeto
     if(piperPosition < 120 && joaoPosition <= 70 && piperPosition >0){
