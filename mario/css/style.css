@@ -133,6 +133,9 @@ button{
     cursor: pointer;
 }
 
+.none{
+    display: none;
+}
 @keyframes pipe-animation {
     0%{
         right: -70px;
@@ -211,7 +214,6 @@ button{
         bottom: 0;
         width: 30px;
         animation: pipe-animation 1s infinite linear;
-        animation-delay: 1s;
     }
 
     @keyframes jump{
