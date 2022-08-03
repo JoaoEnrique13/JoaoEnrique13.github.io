@@ -2,6 +2,8 @@ const mario = document.querySelector(".mario")//mario
 const piper = document.querySelector(".pipe")//cano
 const clouds = document.querySelector(".clouds")
 const clouds1 = document.querySelector(".clouds1")
+const musicPlay = document.querySelector("#play-music")
+const musicOver = document.querySelector("#game-over-music")
 
 //funcao para pular
 const jump = () =>{
@@ -19,6 +21,7 @@ const loop = setInterval(()=>{
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
     const cloudsPosition = + window.getComputedStyle(clouds).right.replace('px', '')
     const cloudsPosition1 = + window.getComputedStyle(clouds1).right.replace('px', '')
+    musicPlay.play()
     
     if(piperPosition < 120 && marioPosition <= 80 && piperPosition >0){
         piper.style.animation = "none"
@@ -40,6 +43,9 @@ const loop = setInterval(()=>{
 
         clearInterval(loop)
         clearInterval(timer)
+
+        musicPlay.pause()
+        musicOver.play()
     }
 
 }, 10)
