@@ -210,7 +210,7 @@ button{
         position: absolute;
         bottom: 0;
         width: 30px;
-        animation: pipe-animation 1.3s infinite linear;
+        animation: pipe-animation 1s infinite linear;
     }
 
     @keyframes jump{
