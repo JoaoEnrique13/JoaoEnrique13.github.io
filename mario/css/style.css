@@ -196,7 +196,7 @@ button{
         padding: 20px 50px;
     }
     .game-board{
-        height: 400px;
+        height: 450px;
     }
 
     .mario{
@@ -209,7 +209,7 @@ button{
     .pipe{
         position: absolute;
         bottom: 0;
-        width: 50px;
+        width: 30px;
         animation: pipe-animation 1.3s infinite linear;
     }
 
