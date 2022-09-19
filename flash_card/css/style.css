@@ -121,8 +121,9 @@ footer a{
         margin: 20px 0;
     }
     .card{
-        width: 300px;
+        width: 350px;
         height: 200px;
+        margin: 10px!important;
     }
     .input-texto{
         margin-top: -60px!important;
@@ -130,18 +131,36 @@ footer a{
 }
 
 @media screen and (max-width: 412px) {
+
+    main h1{
+        margin-top: 50px;
+    }
     .divisao-card{
         margin: 20px 0;
         flex-wrap: wrap;
         border-bottom: 1px solid #fff;
+        padding: 0 0;
     }
 
     .textos{
         width: 100%;
-        padding: 10px 20px;
+        padding: 10px 5px;
+    }
+
+    .text{
+        width: 90%;
+    }
+
+    .text-input{
+        width: 100%;
     }
 
     .input-texto{
         margin-top: 0px!important;
+        width: 45%;
+    }
+
+    .input-card{
+        width: 100%;
     }
 }
