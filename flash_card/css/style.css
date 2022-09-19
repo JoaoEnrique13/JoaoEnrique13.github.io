@@ -1,0 +1,147 @@
+:root{
+    --azul-principal: #002060;
+    --vermelho-principal: #c40043;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #c40043;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+main h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+
+
+.divisao-card{
+    width: 100%!important;
+    display: flex;
+    margin: 50px 0;
+    background: #002060;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+
+.card{
+    background-image: url('../img/folha.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100px;
+    width: 500px;
+    margin: 10px 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.img-card{
+    width: 100%;
+}
+.textos{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.input-card{
+    background: transparent;
+    border: 0;
+    width: 100%;
+    outline: 0;
+    padding: 35px 20px 20px 20px;
+    line-height: 28px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    cursor: pointer;
+}
+
+.text{
+    width: 100%;
+    display: flex;
+}
+.text-input{
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 49%;
+}
+
+
+.input-texto{
+    width: 49%;
+    outline: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+}
+
+.card-fundo{
+    transform: rotate(360deg);
+}
+
+.card-frente{
+    transform: rotate(-360deg);
+}
+
+footer{
+    background: #002060;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: underline wavy;
+}
+
+@media screen and (max-width: 713px) {
+    .divisao-card{
+        margin: 20px 0;
+    }
+    .card{
+        width: 300px;
+        height: 200px;
+    }
+    .input-texto{
+        margin-top: -60px!important;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .divisao-card{
+        margin: 20px 0;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #fff;
+    }
+
+    .textos{
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .input-texto{
+        margin-top: 0px!important;
+    }
+}
