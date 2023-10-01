@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.pergunta{/*div cinza que contem as perguntas*/
+    width: 100%;
+    background: rgba(233, 231, 231, 0.658);
+    padding: 50px 50px;
+    border-radius: 10px;
+}
+
+main{/*corpo do site*/
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1{/*numero da pergunta (Pergunta x)*/
+    margin: 20px 0;
+}
+
+h3{/*Pergunta*/
+    margin: 10px 0;
+}
+
+input[type=radio]{/*Tirar os inputs e deixar apenas os labels*/
+    display: none;
+}
+
+label{/*respostas*/
+    background: dodgerblue;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+label:hover{/*respostas*/
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+input[type=radio]:checked + label{/*respostas ao clicar em uma opcao*/
+    transform: scale(1.1);
+}
+
+form{/*alinhar itens do formulario*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn-proximo{/*botao para passar pergunta*/
+    background: darkgreen;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.btn-proximo:hover{/*botao para passar pergunta*/
+    opacity: 0.7;
+}
+
+.btn-proximo:disabled{/*botao para passar pergunta (desativado)*/
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.final{/*tela final (aparece apenas no final)*/
+    background: rgba(233, 231, 231, 0.658);
+    padding: 100px 100px;
+    border-radius: 10px;
+    display: none;
+    width: 100%;
+}
+
+.btn-tentar{/*botao para tentar novamente caso o tempo acabe*/
+    background: darkgreen;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.parabens h2{/*texto de parabens no final*/
+    margin-bottom:100px;
+}
+
+.status{/*barra de status das perguntas*/
+    width: 100%;
+    height: 5px;
+    background: rgba(233, 231, 231, 0.658);
+}
+
+.porcentagem{/*percentagem da barra de status*/
+    height: 100%;
+    width: 0%;
+    background: dodgerblue;
+    transition: 1s;
+}
+
+header{/*tela que aparece antes das perguntas*/
+    background: dodgerblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+header h1{/*titulo da primeira tela*/
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+}
+header h2{/*texto da primeira tela*/
+    width: 100%;
+    margin-top: -300px;
+    text-align: center;
+}
+
+.btn-comecar, .btn-comecar-tempo{/*botoes da primeira tela*/
+    color: dodgerblue;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+    font-size: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 10px;
+    background: #fff;
+    transition: 0.5s;
+    margin-top: -400px;
+}
+
+.btn-comecar:hover, .btn-comecar-tempo:hover{/*botoes da primeira tela*/
+    color: #fff;
+    border: 1px solid #fff;
+    background: dodgerblue;
+}
+
+a{
+    color: #fff;
+    text-decoration-style: wavy;
+}
+
+.tempo-esgotado{/*tela d tempo esgotado*/
+    background: rgb(255, 0, 0, 0.315);
+    padding: 50px 50px;
+    border-radius: 5px;
+    display: none;
+}
+
+.timer{/*contagem para o tempo das perguntas*/
+    font-size: 20px;
+}
+
+
+/* deixar site responsivo */
+@media screen and (max-width: 1072px){
+    header h1{
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 912px){
+    header h1{
+        margin-top: 150px;
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+    header h2{
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+
+    .btn-comecar, .btn-comecar-tempo{
+        margin-left:10px;
+        font-size: 35px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+    h3{
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+    label{
+        font-size: 30px;
+        padding: 15px;
+    }
+    .btn-proximo{
+        font-size: 30px;
+        width: 200px;
+    }
+    main{
+        padding: 50px;
+    }
+    .timer{
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 540px){
+    main{
+        padding: 0 10px;
+    }
+
+    .pergunta{
+        padding: 30px 30px;
+    }
+
+    header h1{
+        margin-top: 80px;
+        font-size: 45px;
+        margin-bottom: 70px;
+    }
+    header h2{
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+
+    .btn-comecar, .btn-comecar-tempo{
+        margin-left:10px;
+        font-size: 35px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    label{
+        font-size: 30px;
+        padding: 15px;
+    }
+    .btn-proximo{
+        font-size: 30px;
+        width: 200px;
+    }
+    main{
+        padding: 30px;
+    }
+    .timer{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 280px){
+    main{
+        padding: 0 10px;
+    }
+
+    .pergunta{
+        padding: 30px 30px;
+    }
+
+    header h1{
+        margin-top: 80px;
+        font-size: 35px;
+    }
+    header h2{
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+
+    .btn-comecar, .btn-comecar-tempo{
+        margin-left:5px;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    label{
+        font-size: 25px;
+        padding: 10px;
+    }
+    .btn-proximo{
+        font-size: 30px;
+        width: 200px;
+    }
+    main{
+        padding: 0px;
+    }
+    .timer{
+        font-size: 40px;
+    }
+}

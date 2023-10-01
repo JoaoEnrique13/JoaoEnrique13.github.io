@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <!-- Tela principal -->
+    <header>
+        <h1>Quiz - Dois Irmãos</h1>
+        <!-- <h2>Desenvolvido pelo <a href="http://github.com/JoaoEnrique" target="_blank" rel="noopener noreferrer">@João Enrique</a>, com HTML, CSS e JavaScript puro</h2> -->
+        <button class="btn-comecar">Começar</button>
+        <button class="btn-comecar-tempo">Com Tempo</button>
+    </header>
+
+    <main>
+        <div class="status"><!-- Barra de Status das perguntas-->
+            <div class="porcentagem"></div>
+        </div>
+
+        <div class="timer"><!-- Timer -->
+            <span class="minutos">05</span> :
+            <span class="segundos">00</span>
+        </div>
+
+        <div class="tempo-esgotado"><!-- Tela de tempo esgotado -->
+            <h1>Quem pena ;-;</h1>
+            <h3>Infelizmente o tempo acabou. Você acertou <span class="acertos"></span> Questões</h3>
+            <button class="btn-tentar" onclick="recomecar()">Tentar Novamente</button>
+        </div>
+
+        <div class="final"><!-- Tela Final -->
+            <span class="parabens">
+                <h1></h1>
+                <h2></h2><!-- perguntas acertadas-->
+            </span>
+
+            <button class="btn-tentar" onclick="recomecar()">Tentar Novamente</button><!-- Botao pra recomecar-->
+        </div>
+
+        <!-- Perguntas do quiz (apenas a primeira aparece) -->
+        <div class="pergunta"><!-- Pergunta 1-->
+            <h1>Pergunta 1</h1>
+             
+            <form>
+                <h3>Qual é o nome dos dois irmãos gêmeos no livro?</h3>
+                <input class="correta" type="radio" name="nome_irmao" id="yaqub_e_omar">
+                <label class="correta" for="yaqub_e_omar">Yaqub e Omar.</label><br>
+               
+                <input type="radio" name="nome_irmao" id="joao_e_maria">
+                <label for="joao_e_maria">João e Maria</label><br>
+
+                <input type="radio" name="nome_irmao" id="pedro_e_paulo">
+                <label for="pedro_e_paulo">Pedro e Paulo</label><br><!--Resposta certa-->
+
+                <input type="radio" name="nome_irmao" id="nenhum">
+                <label for="nenhum">Nenhuma das alternativas</label><br>       
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 2-->
+            <h1>Pergunta 2</h1>
+                             
+            <form>
+                <h3>Onde se passa a história do livro?</h3>
+                <input type="radio" name="local" id="sp">
+                <label for="sp">São Paulo</label><br><!--Resposta certa-->
+        
+                <input class="correta" type="radio" name="local" id="manaus">
+                <label class="correta" for="manaus">Manaus.</label><br>
+            
+                <input type="radio" name="local" id="rj">
+                <label for="rj">Rio de Janeiro</label><br>
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 2-->
+            <h1>Pergunta 3</h1>
+                             
+            <form>
+                <h3>Qual é o nome da mãe dos irmãos gêmeos?</h3>
+                <input type="radio" name="mae" id="Zuleika">
+                <label for="Zuleika">Zuleika</label><br>
+
+                <input class="correta" type="radio" name="mae" id="Zana">
+                <label class="correta" for="Zana">Zana.</label><br><!--Resposta certa-->
+            
+                <input type="radio" name="mae" id="Zilda">
+                <label for="Zilda">Zilda</label><br>
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 4-->
+            <h1>Pergunta 4</h1>
+                             
+            <form>
+                <h3>Qual é o gênero literário do livro "Dois Irmãos"?</h3>
+                <input type="radio" name="genero" id="Ficcao_científica">
+                <label for="Ficcao_científica">Ficção científica</label><br>
+        
+                <input type="radio" name="genero" id="Misterio">
+                <label for="Misterio">Mistério</label><br>
+                
+                <input class="correta" type="radio" name="genero" id="Romance"><!--Resposta certa-->
+                <label class="correta" for="Romance">Romance.</label><br>
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 5-->
+            <h1>Pergunta 5</h1>
+                             
+            <form>
+                <h3>Qual é o título completo do livro "Dois Irmãos"?</h3>
+                <input type="radio" name="titulo" id="brasileira">
+                <label for="brasileira">Dois Irmãos: Uma História Brasileira</label><br>
+        
+                <input type="radio" name="titulo" id="saga">
+                <label for="saga">Dois Irmãos: A Saga de Yaqub e Omar</label><br>
+
+                <input class="correta" type="radio" name="titulo" id="uma_historia_de_amor_e_odio"><!--Resposta certa-->
+                <label class="correta" for="uma_historia_de_amor_e_odio">Dois Irmãos: Uma História de Amor e Ódio.</label><br>
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 6-->
+            <h1>Pergunta 6</h1>
+                             
+            <form>
+                <h3>Qual é o prêmio literário que o livro "Dois Irmãos" recebeu?</h3>
+                <input class="correta" type="radio" name="premio" id="jabuti">
+                <label class="correta" for="jabuti">Prêmio Jabuti.</label><br>
+
+                <input type="radio" name="premio" id="nobel">
+                <label for="nobel">Nobel de Literatura</label><br>
+
+                <input type="radio" name="premio" id="prize"><!--Resposta certa-->
+                <label for="prize">Booker Prize</label><br>
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 7-->
+            <h1>Pergunta 7</h1>
+                             
+            <form>
+                <h3> Qual é o nome do autor do livro "Dois Irmãos"?</h3>
+                <input type="radio" name="autor" id="paulo">
+                <label for="paulo">Paulo Coelho</label><br>
+
+                <input type="radio" name="autor" id="machado"><!--Resposta certa-->
+                <label  for="machado">Machado de Assis</label><br>
+            
+                <input class="correta" type="radio" name="autor" id="milton">
+                <label class="correta" for="milton">Milton Hatoum.</label><br>
+            </form>
+            <button class="btn-proximo" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="pergunta"><!-- Pergunta 8-->
+            <h1>Pergunta 8</h1>
+                             
+            <form>
+                <h3> Qual é o tema principal explorado no livro "Dois Irmãos"?</h3>
+                <input class="correta" type="radio" name="tema" id="irmaos">
+                <label class="correta" for="irmaos">O relacionamento entre irmãos.</label><br>
+
+                <input type="radio" name="tema" id="sp">
+                <label for="sp">A vida na cidade de São Paulo</label><br>
+            
+                <input type="radio" name="tema" id="petroleo"><!-- Resposta certa-->
+                <label for="petroleo">A descoberta de petróleo na Amazônia</label><br>
+    
+            </form>
+            <button class="btn-proximo" onclick="fim()">Próximo</button>
+        </div>
+
+        
+        
+    </main>
+
+    <script src="js/main.js"></script>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
